@@ -1,12 +1,12 @@
 import requests
-
+import config
 
 def authenticate():
-        auth = requests.auth.HTTPBasicAuth('XL7-X887Y2zB1Q', 'IPRlpCtEJwlpZpVgXX5bn2cMti_-2Q')
+        auth = requests.auth.HTTPBasicAuth(config.auth["access_key"], config.auth["secret_key"])
 
         data = {'grant_type': 'password',
-                'username': 'Hobby-notifier-bot',
-                'password': 'BmakGkFNsptnuM8c'}
+                'username': config.auth["username"],
+                'password': config.auth["password"]}
 
         #bot info
         headers = {'User-Agent': 'Hobby-Notifier/0.0.1'}
