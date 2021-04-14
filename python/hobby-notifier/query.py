@@ -2,7 +2,7 @@ from reddit_oath import *
 import config
 
 #set keywords
-keywords = ["russian"]
+keywords = "AKM"
 
 #vars
 queryList = []
@@ -16,7 +16,8 @@ res = requests.get(config.hobby["subreddit"],
 for post in res.json()['data']['children']:
         queryList.append((post['data']['title']))
 
-print(queryList)
+#print(queryList)
 
-#if '[WTB] Romy Palmswell HG’s - $40 +/- [VA]' in queryList:
-        #print("test")
+l1 = [title for title in queryList if keywords in title]
+
+print(l1)
