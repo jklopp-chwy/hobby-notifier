@@ -21,3 +21,5 @@ def authenticate():
         headers = {**headers, **{'Authorization': f"bearer {TOKEN}"}}
 
         return(headers)
+
+print(authenticate())

@@ -2,11 +2,10 @@ from reddit_oath import *
 import config
 
 #set keywords
-keywords = "AKM"
+keywords = "Russian"
 
 #vars
 queryList = []
-dataList = []
 headers = authenticate()
 
 requests.get('https://oauth.reddit.com/api/v1/me', headers=headers)
@@ -16,8 +15,6 @@ res = requests.get(config.hobby["subreddit"],
 for post in res.json()['data']['children']:
         queryList.append((post['data']['title']))
 
-#print(queryList)
-
-l1 = [title for title in queryList if keywords in title]
-
-print(l1)
+#search the above list for the keyword and generate a new list. searching substring within a string
+dataList = [str for str in queryList if keywords in str]
+print(dataList)
