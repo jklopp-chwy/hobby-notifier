@@ -13,10 +13,3 @@ sending_number = config.twilio["twilio_phone_number"]
 my_phone_number = config.twilio["my_phone_number"]
 
 client = Client(account_sid, auth_token)
-
-message = client.messages.create(
-    to=my_phone_number, 
-    from_=sending_number,
-    body="Hello from Python!")
-
-print(message.sid)
