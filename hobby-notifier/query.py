@@ -1,8 +1,9 @@
-from reddit_oath import *
+from oath import *
+from twilio_auth import *
 import config
 
 #set keywords
-keywords = "Russian"
+keywords = "WTB"
 
 #vars
 queryList = []
