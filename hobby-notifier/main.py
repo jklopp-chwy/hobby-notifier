@@ -1,4 +1,4 @@
-from oath import *
+from reddit_auth import *
 from twilio_auth import *
 import config
 
