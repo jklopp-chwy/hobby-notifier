@@ -7,5 +7,7 @@ auth = {
 
 #input the subreddit and keyword you want to search for
 hobby = {
-    "subreddit": "the subreddit you want to monitor"
+    "subreddit": "string, the subreddit you want to monitor"
 }
+
+keywords = ["AK, mags"]
