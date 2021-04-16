@@ -15,7 +15,7 @@ def authenticate():
         TOKEN = res.json()['access_token']
         headers = {**headers, **{'Authorization': f"bearer {TOKEN}"}}
 
-        return(headers)
+        return()
 
 print(authenticate())
 
