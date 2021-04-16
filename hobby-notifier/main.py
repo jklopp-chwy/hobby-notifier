@@ -1,3 +1,5 @@
+##TODO: still need to figure out how to run this every minute, as a systemd service. 
+#incorporate logging
 from reddit_auth import *
 from twilio_auth import *
 import config
@@ -5,7 +7,6 @@ import string
 import mysql.connector
 
 queryList = []
-#dataList = []
 
 headers = authenticate()
 requests.get('https://oauth.reddit.com/api/v1/me', headers=headers)
