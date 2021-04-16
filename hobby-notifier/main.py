@@ -1,14 +1,13 @@
 from reddit_auth import *
 from twilio_auth import *
 import config
-import time
 import string
 import mysql.connector
 
 queryList = []
-dataList = []
-headers = authenticate()
+#dataList = []
 
+headers = authenticate()
 requests.get('https://oauth.reddit.com/api/v1/me', headers=headers)
 res = requests.get(config.hobby["subreddit"], headers=headers)
 
@@ -31,6 +30,4 @@ def checkData():
                                         #sendSms(s)
                                         mycursor.execute("INSERT INTO posts (post_ID) VALUES (%(s)s)", {'s': s});
                                         config.mydb.commit()
-        
-
 checkData()
