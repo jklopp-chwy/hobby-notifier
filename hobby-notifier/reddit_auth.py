@@ -17,5 +17,3 @@ def authenticate():
 
         return(headers)
 
-print(authenticate())
-
