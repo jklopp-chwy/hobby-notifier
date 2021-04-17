@@ -44,7 +44,7 @@ CREATE TABLE posts (
 4. create and input values in config.py nano  hobby-notifier/hobby-notifier/config.py
 4. python3 -m venv hobby-notifier/hobby-notifier/venv
 5. source hobby-notifier/hobby-notifier/venv/bin/activate
-6. pip3 install -r hobby-notifier/requirements.txt 
+6. pip3 install -r hobby-notifier/hobby-notifier/requirements.txt 
 7. crontab -e
 
 
